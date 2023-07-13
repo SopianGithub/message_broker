@@ -1,0 +1,54 @@
+{
+    "name": "softyan-solutions/transport-backend-libs",
+    "description": "Custom Curl Ixudra with my requirements",
+    "keywords": [
+        "softyan-solutions",
+        "transport-backend-libs"
+    ],
+    "homepage": "https://github.com/softyan-solutions/transport-backend-libs",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yayan Sopian",
+            "email": "yayansopiant@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoftyanSolutions\\TransportBackendLibs\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoftyanSolutions\\TransportBackendLibs\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoftyanSolutions\\TransportBackendLibs\\TransportBackendLibsServiceProvider"
+            ],
+            "aliases": {
+                "TransportBackendLibs": "SoftyanSolutions\\TransportBackendLibs\\TransportBackendLibsFacade"
+            }
+        }
+    }
+}
